@@ -1,24 +1,37 @@
-var oDiv = null;
-var disX = 0;
-var disY = 0;
 window.onload = function () {
-  oDiv = document.getElementById('box1');
-  oDiv.onmousedown = fnDown;
+  var div1 = new Drag('box1')
+  div1.init();
 }
-function fnDown(ev) {
-  var ev = ev || event;
-  disX = ev.clientX - oDiv.offsetLeft;
-  disY = ev.clientY - oDiv.offsetTop;
+function Drag(id) {
+  this.disX = 0;
+  this.disY = 0;
+  this.oDiv = document.getElementById(id);
+}
 
-  document.onmousemove = fnMove;
-  document.onmouseup = fnUp;
+Drag.prototype.init = function () {
+  var _this = this;
+  document.onmousedown = function () {
+    _this.fnDown();
+  }
 }
-function fnMove(ev) {
-  var ev = ev || event;
-  oDiv.style.left = ev.clientX - disX + 'px';
-  oDiv.style.top = ev.clientY - disY + 'px';
+
+Drag.prototype.fnDown = function () {
+  var _this = this;
+  var ev = ev || window.event;
+  this.disX = ev.clientX - this.oDiv.offsetLeft;
+  this.disY = ev.clientY - this.oDiv.offsetTop;
+  document.onmousemove = function () {
+    _this.fnMove();
+  }
+  document.onmouseup =this.fnUp
+  return false;
 }
-function fnUp() {
+Drag.prototype.fnMove = function (ev) {
+  var ev = ev || window.event;
+  this.oDiv.style.left = ev.clientX - this.disX + 'px';
+  this.oDiv.style.top = ev.clientY - this.disY + 'px';
+}
+Drag.prototype.fnUp = function () {
   document.onmousemove = null;
   document.onmouseup = null;
 }
