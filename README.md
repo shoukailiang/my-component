@@ -1,1 +1,2 @@
-"# my-component" 
+# my-component
+- drag
