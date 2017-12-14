@@ -2,7 +2,7 @@
   var datepicker = {};
   datepicker.getMonthData = function (year, month) {
     var ret = [];
-    if (!year || !month) {
+    if (year === undefined || month === undefined) {
       var today = new Date();
       year = today.getFullYear();
       month = today.getMonth() + 1;
