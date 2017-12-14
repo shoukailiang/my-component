@@ -1,0 +1,62 @@
+.datepicker-wraper{
+  width: 240px;
+  font-size: 16px;
+  color: #666;
+  box-shadow: 2px 2px 8px 2px rgba(128, 128, 128, .3);
+  margin:20px  auto;
+  display: none; /*默认隐藏*/
+  position: absolute;/* 设置成绝对定位是为了不占据文档 */
+}
+.datepicker-wraper-show{
+  display: block;
+}
+.datepicker-wraper .datepicker-header{
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;  
+    font-weight: bold;
+}
+.datepicker-wraper .datepicker-btn{
+  font-family: serif;
+  font-size: 20px;
+  width: 20px;
+  height: 50px;
+  line-height: 50px;
+  color: #1abc9c;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.datepicker-wraper .datepicker-prev-btn{
+  float: left;
+}
+.datepicker-wraper .datepicker-next-btn{
+  float: right;
+}
+.datepicker-wraper .datepicker-body table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.datepicker-wraper .datepicker-body th,
+.datepicker-wraper .datepicker-body td  {
+  height: 30px;
+  text-align: center;
+}
+.datepicker-wraper .datepicker-body th{
+  font-size: 12px;  
+  height: 40px;
+  line-height: 40px;
+}
+.datepicker-wraper .datepicker-body td {
+  font-size: 10px;
+  border: 1px solid #ccc;
+  width: 14%;
+  cursor: pointer;
+}  
+.datepicker-wraper .datepicker-body td:hover{
+  background: #f0f0f0;
+}
+  

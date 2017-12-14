@@ -1,2 +1,3 @@
 # my-component
 - drag
+- datepicker
