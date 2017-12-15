@@ -32,7 +32,8 @@
       if (i % 7 === 0) {
         html += '<tr>';
       }
-      html += `<td>${date.showDate}</td>`;
+      /* 自定义属性data-date用了data.date，这个会有负数，会让月份回退 */
+      html += `<td data-date=${date.date}>${date.showDate}</td>`;
       if (i % 7 === 6) {
         html += `</tr>`;
       }
@@ -100,5 +101,30 @@
         datepicker.render('next');
       }
     }, false);
+    $warper.addEventListener('click', function (e) {
+      var $target = e.target;
+      if ($target.tagName.toLowerCase() !== 'td') return;
+      /* dataset这个api是data开头的属性能用这个属性获取到 */
+      var date = new Date(monthData.year, monthData.month - 1, $target.dataset.date);
+      console.log(date);
+      $input.value = format(date);
+      /* 点击完后就把日历关掉 */
+      $warper.classList.remove('datepicker-wraper-show');
+      isOpen = false;
+    });
+    function format (data) {
+      var ret = '';
+      var padding = function (num) {
+        if (num < 9) {
+          return '0' + num;
+        } else {
+          return num;
+        }
+      };
+      ret += data.getFullYear() + '-';
+      ret += padding(data.getMonth() + 1) + '-';
+      ret += padding(data.getDate());
+      return ret;
+    }
   };
 })();
