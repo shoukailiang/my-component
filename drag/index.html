@@ -10,9 +10,12 @@
 </head>
 
 <body>
-  <div id="box1"></div>
-
+  <div id="box1" data-config='{"width": "100px","height": "100px","backgroundColor": "black","position": "absolute"}'></div>
   <script src="./index.js"></script>
+  <script>
+    var div1 = new Drag('box1');
+    div1.init();
+  </script>
 </body>
 
 </html>
