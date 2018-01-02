@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="tab js-tab1">
+    <h1>不配置参数，默认</h1>
+    <div class="tab-nav">
+      <ul class="clearfix">
+        <li class="actived">
+          第一
+        </li>
+        <li>
+          第二
+        </li>
+        <li>
+          第三
+        </li>
+        <li>
+          第四
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child1.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child2.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child3.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="tab js-tab2" data-config='{ "triggerType": "click", "effect": "fade", "sequence": "1", "auto": 1000}'>
+      <h2>配置事件是click,淡入淡出，自动1s</h2>
+    <div class="tab-nav">
+      <ul class="clearfix">
+        <li class="actived">
+          第一
+        </li>
+        <li>
+          第二
+        </li>
+        <li>
+          第三
+        </li>
+        <li>
+          第四
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child1.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child2.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child3.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="tab js-tab3" data-config='{ "triggerType": "click", "effect": "default", "sequence": "2", "auto": 5000}'>
+      <h2>配置事件是click,默认选择第二个，自动5s</h2>
+    <div class="tab-nav">
+      <ul class="clearfix">
+        <li class="actived">
+          第一
+        </li>
+        <li>
+          第二
+        </li>
+        <li>
+          第三
+        </li>
+        <li>
+          第四
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-wrap">
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child1.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child2.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child3.jpg" alt="">
+      </div>
+      <div class="content-item">
+        <img src="http://p1k91ykwc.bkt.clouddn.com/child4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+  <script>
+    var tab1 = new Tab(document.querySelector('.js-tab1'))
+    var tab2 = new Tab(document.querySelector('.js-tab2'))
+    var tab3 = new Tab(document.querySelector('.js-tab3'))
+  </script>
+</body>
+
+</html>
