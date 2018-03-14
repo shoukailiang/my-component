@@ -10,7 +10,7 @@
   div1.init();
   ```
 ## datepicker
-  点击查看:[datepicker组件](https://shoukailiang.github.io/my-component/datepicker/)
+  点击查看:[datePicker组件](https://shoukailiang.github.io/my-component/datePicker/)
 
   能实现选择日期，上一月，下一月，点击日期会返回到input上
   ```
