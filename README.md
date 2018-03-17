@@ -9,6 +9,7 @@
   var div1 = new Drag('box1');//box1为id名字
   div1.init();
   ```
+  #### 增加了拖拽组件的手机端版本，虽然实现的不够怎么完美  
 ## datepicker
   点击查看:[datePicker组件](https://shoukailiang.github.io/my-component/datePicker/)
 
